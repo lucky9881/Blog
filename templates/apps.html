@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block title %}{% endblock title %}
+
+{% block body %}
+
+ <!--Apps -->
+ <br><br>
+ <section class="app item-group">
+	<div class="title-bar"><div
+		class="title-container">
+		<h2 class="ellipsis">:>_ Mods Zone_ <:</h2></div><div
+		class="expand-info-container">
+		<a href="#" class="link expand-info">
+		<br><br>	
+			
+		</a></div>
+	</div>
+	<br><br>
+	{% for a in app %}
+	<div class="item-list hscroll">
+		<div class="left scroll-assist"></div>
+		<div class="overflow-container"><a
+			href="/apps_item/{{a.Apps_slug}}" class="scroll-item">
+			<div class="thumbnail-container">
+				<img src="/media/{{a.Apps_img}}" width="180x180" alt="" class="item-thumbnail">
+			</div>
+			<div class="item-details description">
+				<br>
+				<h3  class="item-title ellipsis" >{{a.Apps_titile | safe}}</h3>
+				<p class="item-category ellipsis">MOD</p>
+				
+				
+			<br><br>
+
+				{% endfor %}
+
+{% endblock body %}

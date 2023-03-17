@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+
+
+
+{% block body %}
+        
+        
+        
+        
+        
+        <!-- Start Blog Page Section -->
+        <div class="container">
+            <div class="row">
+                
+                <!-- Start Blog Body Section -->
+                {% for b in blogs %}
+                <div class="col-md-8 blog-body">
+                    
+                    
+                    <div class="blog-post">
+                        
+                        <div>
+                            <img src="/media/{{b.Blog_img}}" >
+                        </div>
+                        
+                        <h1 class="post-title">{{b.Blog_titile | safe}}
+
+                            <a href="/blog_item/{{b.Blog_slug}}" class="btn btn-primary readmore">Read More...</a>
+                        </h1>
+                                 
+                   <!--    <h2 href="/blog_item/{{b.id}}" class="btn btn-primary readmore">Read more...</h2>-->
+
+                        
+                    <!--       <a href="/blog_item/{{b.id}}" class="btn btn-primary readmore">Read More...</a> --> 
+                        
+                        
+                    
+                    
+                    <!-- End Blog Post -->
+                    
+
+                    
+                    
+                   
+                    
+                </div>
+                {% endfor %}
+                <!-- End Blog Body Section -->
+                
+              
+                    
+                {% endblock %}                   
